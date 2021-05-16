@@ -1,6 +1,6 @@
 // Create a leaflet map object using "L.map()"
 var myMap = L.map("map", {
-    center: [37.09, -110.71],
+    center: [37.50, -110.71],
     zoom: 4
     // layers: [lightmap, streetMap]
 });
@@ -76,11 +76,11 @@ d3.json(url).then(function (data) {
         // marker radius
         L.circle(latlon, {
             stroke: "black",
-            fillOpacity: 0.5,
+            fillOpacity: 0.9,
             color: '#FDFEFE',
             fillColor: markerColor(depth),
-            fillOpacity: .6,
-            weight: 1,
+            fillOpacity: .8,
+            weight: 2,
             //marker size to reflect size// set marker size to reflect the magnitude
             radius: mag * 25000
         }).bindPopup(`<h3>Location:${place}</h3><p>Magnitude: ${mag}</p>`)
