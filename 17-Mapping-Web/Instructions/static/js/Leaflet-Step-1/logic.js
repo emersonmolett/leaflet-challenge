@@ -45,15 +45,15 @@ var markerColor = function (value) {
     if (value < 0) {
         return '#c7e76d'
     } else if (value < 20) {
-        return '#b3cf62'
-    } else if (value < 60) {
         return '#9fb857'
-    } else if (value < 120) {
-        return '#8ba14c'
-    } else if (value < 180) {
+    } else if (value < 60) {
         return '#778a41'
+    } else if (value < 120) {
+        return '#4f5c2b'
+    } else if (value < 180) {
+        return '#272e15'
     } else {
-        return '#637336'
+        return '#000000'
     }
 }
 
@@ -107,11 +107,11 @@ legend.onAdd = function () {
     ];
     var colors = [
         "#c7e76d",
-        "b3cf62",
         "#9fb857",
-        "8ba14c",
         "#778a41",
-        "#637336"
+        "#4f5c2b",
+        "#272e15",
+        "#000000"
 
     ];
 
