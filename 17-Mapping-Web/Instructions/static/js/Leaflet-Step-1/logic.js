@@ -88,3 +88,37 @@ d3.json(url).then(function(data) {
 var legend = L.control({
     position: "bottomright"
 });
+
+legend.onAdd = function() {
+    var div = L.DomUtil.create("div", "legend");
+    var limits = [
+        "<0",
+        "0-19",
+        "20-59",
+        "60-119",
+        "120-179",
+        ">180"
+    ];
+    var colors = [
+        "#c7e76d",
+        "b3cf62",
+        "#9fb857",
+        "8ba14c",
+        "#778a41",
+        "#637336"
+    ];
+
+    // heading for legend
+    var legendInfo = "<h3> Earthquake Depth</h3>"
+
+    div.innerHtml = legendInfo;
+
+    for (var i = 0; i < limits.length;i++) {
+        div.innerHtml +=
+        '<i style="background:' + (colors[i]) + '"></i> ' +
+                limits[i] + '<br>';
+    }
+    return div; 
+};
+
+legend.addTo(myMap)
