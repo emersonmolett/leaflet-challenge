@@ -52,3 +52,21 @@ var markerColor = function (value) {
         return "#637336"
     }
 }
+
+// populate markers on map
+d3.json(url).then(function(data) {
+    // go through locations & create city/state marks
+    for (var i = 0; i < data.features.lenght; i++) {
+
+        var lat = data.features[i].geometry.coordinates[1];
+        var lon = data.features[i].geometry.coordinates[0];
+        var latlon = [lat,lon];
+        var mag = data.features[i].properties.mag;
+        var depth = data.features[i].geometry.coordinates[2];
+        var place = data.features[i].properties.place;
+        // console.log(eaquakeData[i].geometry.coordinates);
+        // console.log(lat,lon);
+        // console.log(place);
+
+    }
+})
