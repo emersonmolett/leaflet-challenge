@@ -24,3 +24,9 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
     id: "light-v10",
     accessToken: API_KEY
 });
+
+// add light-v10 to tilelayers 
+lightmap.addTo(myMap);
+
+// json call for all earthquakes in the last seven days
+var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
