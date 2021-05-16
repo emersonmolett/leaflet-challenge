@@ -68,5 +68,18 @@ d3.json(url).then(function(data) {
         // console.log(lat,lon);
         // console.log(place);
 
+        // marker radius 
+        L.circle(latlon, {
+            stroke: "black", 
+            fillOpacity: 0.7, 
+            color: "#cacbcb", 
+            fillColor: markerColor(depth), 
+            fillOpacity: .5,
+            weight: 2,
+
+            //marker size to reflect size
+            radius: mag *25000
+        }).bindPopup("<h3>Location:${place}</h3><p>Magnitude: ${mag}</p>")
+        .addTo(myMap);
     }
 })
