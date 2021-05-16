@@ -83,3 +83,8 @@ d3.json(url).then(function(data) {
         .addTo(myMap);
     }
 })
+
+// create legend
+var legend = L.control({
+    position: "bottomright"
+});
