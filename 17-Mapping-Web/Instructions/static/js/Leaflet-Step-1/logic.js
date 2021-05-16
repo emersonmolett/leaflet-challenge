@@ -30,3 +30,8 @@ lightmap.addTo(myMap);
 
 // json call for all earthquakes in the last seven days
 var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+
+// making function to define marker size based on earthquake magnitude 
+function markerSize(magnitude) {
+    return magnitude * 30000;
+}
