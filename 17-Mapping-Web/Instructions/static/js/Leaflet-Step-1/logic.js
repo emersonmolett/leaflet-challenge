@@ -122,11 +122,12 @@ legend.onAdd = function () {
 
     for (var i = 0; i < limits.length; i++) {
         div.innerHTML +=
-            '<i style="background:' + (colors[i]) + '"></i> ' +
-            limits[i] + '<br>';
+            '<i style="background:' + (colors[i]) + '">' +
+            limits[i] + '</i> <br>';
     }
 
     return div;
 };
+
 
 legend.addTo(myMap)
