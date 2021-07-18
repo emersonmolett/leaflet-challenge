@@ -11,3 +11,12 @@ Leaflet generated a map:
 <li>Markers with size corresponding to earthquake magnitude</li>
 <li>Legend showing the depth and corresponding color</li> 
 
+</br>
+
+Data Points:</br>
+The earthquake data points show:
+<li>Scale with magnitude</li> 
+<li>Colors change with depth level</li> 
+<li>Tooltip with the magnitude, location, and depth</li> 
+<li>Correctly load in proper location</li> 
+
